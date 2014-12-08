@@ -1,0 +1,10 @@
+{
+	"description" : "Sistema de Productos Acad&eacute;micos",
+	"name" : "utm/productosacademicos",
+	"license": "POR DECIDIR",
+	"require": {
+	},
+	"require-dev": {
+		"mikey179/vfsStream": "1.1.*"
+	}
+}
