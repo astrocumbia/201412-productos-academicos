@@ -1,42 +1,4 @@
-<?php
-/**
- * CodeIgniter
- *
- * An open source application development framework for PHP 5.2.4 or newer
- *
- * This content is released under the MIT License (MIT)
- *
- * Copyright (c) 2014, British Columbia Institute of Technology
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- * THE SOFTWARE.
- *
- * @package	CodeIgniter
- * @author	EllisLab Dev Team
- * @copyright	Copyright (c) 2008 - 2014, EllisLab, Inc. (http://ellislab.com/)
- * @copyright	Copyright (c) 2014, British Columbia Institute of Technology (http://bcit.ca/)
- * @license	http://opensource.org/licenses/MIT	MIT License
- * @link	http://codeigniter.com
- * @since	Version 1.0.0
- * @filesource
- */
-defined('BASEPATH') OR exit('No direct script access allowed');
-?><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
@@ -44,9 +6,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 	<style type="text/css">
 
-	::selection { background-color: #E13300; color: white; }
-	::-moz-selection { background-color: #E13300; color: white; }
-	::-webkit-selection { background-color: #E13300; color: white; }
+	::selection{ background-color: #E13300; color: white; }
+	::moz-selection{ background-color: #E13300; color: white; }
+	::webkit-selection{ background-color: #E13300; color: white; }
 
 	body {
 		background-color: #fff;
@@ -82,11 +44,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		padding: 12px 10px 12px 10px;
 	}
 
-	#body {
+	#body{
 		margin: 0 15px 0 15px;
 	}
-
-	p.footer {
+	
+	p.footer{
 		text-align: right;
 		font-size: 11px;
 		border-top: 1px solid #D0D0D0;
@@ -94,11 +56,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		padding: 0 10px 0 10px;
 		margin: 20px 0 0 0;
 	}
-
-	#container {
+	
+	#container{
 		margin: 10px;
 		border: 1px solid #D0D0D0;
-		box-shadow: 0 0 8px #D0D0D0;
+		-webkit-box-shadow: 0 0 8px #D0D0D0;
 	}
 	</style>
 </head>
@@ -114,12 +76,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<code>application/views/welcome_message.php</code>
 
 		<p>The corresponding controller for this page is found at:</p>
-		<code>application/controllers/Welcome.php</code>
+		<code>application/controllers/welcome.php</code>
 
 		<p>If you are exploring CodeIgniter for the very first time, you should start by reading the <a href="user_guide/">User Guide</a>.</p>
 	</div>
 
-	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
+	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds</p>
 </div>
 
 </body>

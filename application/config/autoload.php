@@ -1,42 +1,4 @@
-<?php
-/**
- * CodeIgniter
- *
- * An open source application development framework for PHP 5.2.4 or newer
- *
- * This content is released under the MIT License (MIT)
- *
- * Copyright (c) 2014, British Columbia Institute of Technology
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- * THE SOFTWARE.
- *
- * @package	CodeIgniter
- * @author	EllisLab Dev Team
- * @copyright	Copyright (c) 2008 - 2014, EllisLab, Inc. (http://ellislab.com/)
- * @copyright	Copyright (c) 2014, British Columbia Institute of Technology (http://bcit.ca/)
- * @license	http://opensource.org/licenses/MIT	MIT License
- * @link	http://codeigniter.com
- * @since	Version 1.0.0
- * @filesource
- */
-defined('BASEPATH') OR exit('No direct script access allowed');
-
+<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 /*
 | -------------------------------------------------------------------
 | AUTO-LOADER
@@ -58,17 +20,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 | 1. Packages
 | 2. Libraries
-| 3. Drivers
-| 4. Helper files
-| 5. Custom config files
-| 6. Language files
-| 7. Models
+| 3. Helper files
+| 4. Custom config files
+| 5. Language files
+| 6. Models
 |
 */
 
 /*
 | -------------------------------------------------------------------
-|  Auto-load Packages
+|  Auto-load Packges
 | -------------------------------------------------------------------
 | Prototype:
 |
@@ -88,31 +49,10 @@ $autoload['packages'] = array();
 |
 | Prototype:
 |
-|	$autoload['libraries'] = array('database', 'email', 'xmlrpc');
-|
-| You can also supply an alternative library name to be assigned
-| in the controller:
-|
-|	$autoload['libraries'] = array('user_agent' => 'ua');
+|	$autoload['libraries'] = array('database', 'session', 'xmlrpc');
 */
 
 $autoload['libraries'] = array();
-
-
-/*
-| -------------------------------------------------------------------
-|  Auto-load Drivers
-| -------------------------------------------------------------------
-| These classes are located in the system/libraries folder or in your
-| application/libraries folder within their own subdirectory. They
-| offer multiple interchangeable driver options.
-|
-| Prototype:
-|
-|	$autoload['drivers'] = array('session', 'cache');
-*/
-
-$autoload['drivers'] = array();
 
 
 /*
@@ -165,12 +105,8 @@ $autoload['language'] = array();
 | -------------------------------------------------------------------
 | Prototype:
 |
-|	$autoload['model'] = array('first_model', 'second_model');
+|	$autoload['model'] = array('model1', 'model2');
 |
-| You can also supply an alternative model name to be assigned
-| in the controller:
-|
-|	$autoload['model'] = array('first_model' => 'first');
 */
 
 $autoload['model'] = array();
