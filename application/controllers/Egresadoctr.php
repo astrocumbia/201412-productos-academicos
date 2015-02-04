@@ -19,12 +19,6 @@ class Egresadoctr extends CI_Controller {
 
     public function add(){
 
-        $pais_origen    =   $this->Egresadodao->getByName( "pais",    $this->input->post('pais_origen'));
-        $estado_origen  =   $this->Egresadodao->getByName( "estado",  $this->input->post('estado_origen'));
-        $ciudad_origen  =   $this->Egresadodao->getByName( "ciudad",  $this->input->post('ciudad_origen'));
-
-        $estado_actual  =   $this->Egresadodao->getByName( "estado" , $this->input->post('estado_actual'));
-        $ciudad_actual  =   $this->Egresadodao->getByName( "ciudad" , $this->input->post('ciudad_actual'));
 
         $estudio = $this->input->post('sigue_estudiando') == "si" ? 1 : 0 ;
 
@@ -37,11 +31,11 @@ class Egresadoctr extends CI_Controller {
             'direccion1' 	    => 		$this->input->post('direccion1'),
             'direccion2' 	    => 		$this->input->post('direccion2'),
             'codigo_postal' 	=> 		$this->input->post('codigo_postal'),
-            'ciudad_id' 	    => 		$ciudad_actual->id,
-            'estado_id' 	    => 		$estado_actual->id,
-            'ciudad_origen_id' 	=> 		$ciudad_origen->id,
-            'estado_origen_id' 	=> 		$estado_origen->id,
-            'pais_origen_id'    => 		$pais_origen->id,
+            'ciudad_id' 	    => 		$this->input->post('ciudad_actual'),
+            'estado_id' 	    => 		$this->input->post('estado_actual'),
+            'ciudad_origen_id' 	=> 		$this->input->post('ciudad_origen'),
+            'estado_origen_id' 	=> 		$this->input->post('estado_origen'),
+            'pais_origen_id'    => 		$this->input->post('pais_origen'),
             'telefono_movil' 	=> 		$this->input->post('telefono_movil'),
             'telefono_movil' 	=> 		$this->input->post('telefono_fijo'),
             'password' 		    => 		md5( md5( $this->input->post('password') ) ),
@@ -54,7 +48,12 @@ class Egresadoctr extends CI_Controller {
 
 
     public function view_add(  ){
-        $this->load->view('agregar_egresado');
+
+        $datos["paises"]   =  $this->Egresadodao->getPaises();
+        $datos["estados"]  =  $this->Egresadodao->getEstados();
+        $datos["ciudades"] =  $this->Egresadodao->getCiudades();
+
+        $this->load->view('agregar_egresado', $datos );
     }
 
     public function view_update( $id ){

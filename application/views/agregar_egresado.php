@@ -1,6 +1,7 @@
 <html>
 <head>
     <title>Agregar Egresado</title>
+
 </head>
 <body>
     <?php echo '<form action="'.base_url().'index.php/Egresadoctr/add" method="post">' ?>
@@ -32,34 +33,57 @@
             <label for="codigo_postal">Codigo Postal: </label>
             <input type="text" id="codigo_postal" name="codigo_postal"><br>
 
+
+
             <label for="estado_actual">Estado Actual: </label>
             <select id="estado_actual" name="estado_actual">
-                <option value="Oaxaca">Oaxaca</option>
-                <option value="Mexico DF">Mexico DF</option>
+                <?php
+                foreach( $estados["data"] as $estado )
+                {
+                    echo '<option value="'.$estado->id.'">'.$estado->nombre.'</option>';
+                }
+                ?>
             </select><br>
 
             <label for="ciudad_actual">Ciudad Actual: </label>
             <select id="ciudad_actual" name="ciudad_actual">
-                <option value="Oaxaca de Juarez">Oaxaca de Juarez</option>
-                <option value="Huajuapan de Leon">Huajuapan de Leon</option>
+                <?php
+                foreach( $ciudades["data"] as $ciudad )
+                {
+                    echo '<option value="'.$ciudad->id.'">'.$ciudad->nombre.'</option>';
+                }
+                ?>
             </select><br>
 
 
             <label for="pais_origen">Pais de Origen: </label>
             <select id="pais_origen" name="pais_origen">
-                <option value="Mexico">Mexico</option>
+                <?php
+                    foreach( $paises["data"] as $pais )
+                    {
+                        echo '<option value="'.$pais->id.'">'.$pais->nombre.'</option>';
+                    }
+                ?>
             </select><br>
 
             <label for="estado_origen">Estado de Origen: </label>
             <select id="estado_origen" name="estado_origen">
-                <option value="Oaxaca">Oaxaca</option>
-                <option value="Mexico DF">Mexico DF</option>
+                <?php
+                    foreach( $estados["data"] as $estado )
+                    {
+                        echo '<option value="'.$estado->id.'">'.$estado->nombre.'</option>';
+                    }
+                ?>
             </select><br>
 
             <label for="ciudad_origen">Ciudad de Origen: </label>
             <select id="ciudad_origen" name="ciudad_origen">
-                <option value="Oaxaca de Juarez">Oaxaca de Juarez</option>
-                <option value="Huajuapan de Leon">Huajuapan de Leon</option>
+                <?php
+                 foreach( $ciudades["data"] as $ciudad )
+                 {
+                    echo '<option value="'.$ciudad->id.'">'.$ciudad->nombre.'</option>';
+                 }
+                ?>
             </select><br>
 
             <label for="telefono_movil">Telefono Movil: </label>

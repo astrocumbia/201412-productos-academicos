@@ -44,6 +44,27 @@ class Egresadodao extends CI_Model {
         $this->db->delete('egresado');
     }
 
+    public function getPaises( )
+    {
+        $query = $this->db->query( 'SELECT * FROM pais' );
+        $resultado = $query->result();
+        return array("data" => $resultado, "numFilas" => $query->num_rows());
+    }
+
+    public function getEstados( )
+    {
+        $query = $this->db->query( 'SELECT * FROM estado' );
+        $resultado = $query->result();
+        return array("data" => $resultado, "numFilas" => $query->num_rows());
+    }
+
+    public function getCiudades( )
+    {
+        $query = $this->db->query( 'SELECT * FROM Ciudad' );
+        $resultado = $query->result();
+        return array("data" => $resultado, "numFilas" => $query->num_rows());
+    }
+
 
 
 }
